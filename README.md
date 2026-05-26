@@ -58,6 +58,7 @@ gh repo create <MY-NEW-PROJECT> --template "x1nv/cpp-project-template" --public 
 cd <MY-NEW-PROJECT>
 # please update "name" in package.json before executing `npm install` command
 npm install                    # for install Commitizen to Git commit
+pip install pre-commit         # if not previously installed
 pre-commit install             # Google rule check and commitlint check
 pre-commit install --hook-type commit-msg
 code .                         # launch vscode
