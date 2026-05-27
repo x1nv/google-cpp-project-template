@@ -1,8 +1,8 @@
 {
     "gitignore": true,
     "ignores": [
-        "LICENSE",
-        "CHANGELOG.md"
+        "**/README.md",
+        "!README.md"
     ],
     "config": {
         "default": true
