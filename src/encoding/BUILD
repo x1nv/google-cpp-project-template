@@ -4,6 +4,7 @@ cc_binary(
     name = "encoding",
     srcs = ["main.cc"],
     deps = [
+        "@mimalloc//:mimalloc",
         "@abseil-cpp//absl/strings"
     ],
 )
