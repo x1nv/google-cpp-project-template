@@ -10,11 +10,18 @@ LICENSE_HEADER = (
     "// Licensed under the MIT License.\n\n"
 )
 
-# generate define guard header
+# generate define guard header 
 def create_guard_define(filename: str):
     project_name = Path.cwd().name.upper().replace("-", "_")
     path = Path(filename)
-    path_prefix = str(path.with_suffix("")).replace(os.sep, "_").upper()
+    
+    # ignore /src/
+    parts = list(path.with_suffix("").parts)
+    if 'src' in parts:
+        parts = parts[parts.index('src') + 1:]
+    processed_parts = [p.replace("-", "_").upper() for p in parts]
+    path_prefix = "_".join(processed_parts)
+    
     guard_name = f"{project_name}_{path_prefix}_H_"
     return (
         f"#ifndef {guard_name}\n"
@@ -35,8 +42,6 @@ def create_files(filename: str):
     with open(cc_path, "w") as f:
         f.write(LICENSE_HEADER)
         f.write(f"#include \"{path.name}.h\"")
-    print(f"created file: {h_path.resolve()}")
-    print(f"created file: {cc_path.resolve()}")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
