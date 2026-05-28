@@ -22,7 +22,7 @@ build:debug --copt=/MDd
 
 # Release build options
 build:release --compilation_mode=opt
-build:release --copt=-O2
+build:release --copt=/clang:-O3
 build:release --copt=/MD
 
 # use clang-cl compiler
