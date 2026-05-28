@@ -5,6 +5,7 @@
             "name": "Launch",
             "type": "cppvsdbg",
             "request": "launch",
+            // change the path to your built executable
             "program": "${workspaceFolder}/bazel-bin/src/encoding/encoding.exe",
             "args": [],
             "cwd": "${workspaceFolder}",

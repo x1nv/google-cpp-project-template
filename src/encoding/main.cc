@@ -1,10 +1,11 @@
 // Copyright (c) <YEAR> <COPYRIGHT HOLDER>.
 // Licensed under the MIT License.
 
+#include <print>
 #ifdef _DEBUG
 #include <crtdbg.h>
 #endif
-#include <cstdio>
+#include "absl/strings/str_cat.h"
 
 int main() {
   // check heap memory leak
@@ -15,7 +16,9 @@ int main() {
   // set utf-8 encoding
   // ...
 
-  printf("Welcome to this C++ project template!\n");
+  std::string message = absl::StrCat("hello", " world!");
+  std::println("Welcome to this C++ project template!");
+  std::println("{}", message);
 
   return 0;
 }

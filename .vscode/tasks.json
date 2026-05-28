@@ -7,7 +7,7 @@
             "command": "bazel",
             "args": [
                 "build",
-                "//src/encoding:encoding",
+                "//src/encoding:encoding", // set your BUILD
                 "--config=debug"
             ],
             "group": "build",
@@ -21,12 +21,22 @@
             "command": "bazel",
             "args": [
                 "build",
-                "//src/encoding:encoding",
+                "//src/encoding:encoding", // set your BUILD
                 "--config=release"
             ],
             "group": "build",
             "problemMatcher": [
                 "$msCompile"
+            ]
+        },
+        {
+            // bazel-compile-commands default support ./bazel-out/x64_windows-fastbuild/... path, so need it
+            "label": "build:fastbuild",
+            "type": "shell",
+            "command": "bazel",
+            "args": [
+                "build",
+                "//src/encoding:encoding" // set your BUILD
             ]
         },
         // Use the official Bazel-recommended compile_commands.
@@ -50,6 +60,7 @@
             "command": "${command:clangd.restart}",
             "isBackground": true,
             "dependsOn": [
+                "build:fastbuild",
                 "Run bazel-compile-commands"
             ],
             "group": {
