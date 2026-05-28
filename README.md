@@ -76,3 +76,9 @@ code .                         # launch vscode
 git add .
 cz
 ```
+
+## Quickly create .h/.cc files
+
+```bash
+python3 tools/newcc.py <filename> # Example: python3 tools/newcc.py src/failed_exit
+```
