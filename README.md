@@ -59,8 +59,7 @@ Project/
 Windows **PowerShell** input:
 
 ```bash
-E:                             # your local disk letter
-cd E:\
+cd /d E:\                      # your local disk letter
 gh repo create <MY-NEW-PROJECT> --template "x1nv/cpp-project-template" --public --clone
 cd <MY-NEW-PROJECT>
 # please update "name" in package.json before executing `npm install` command
