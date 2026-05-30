@@ -24,6 +24,7 @@ Welcome to your C++ Project Template. This template adheres to the Google Style 
 - Node.js
 - Python
 - LLVM
+- Bazel
 
 ## You need install VSCode Extension
 
