@@ -1,10 +1,12 @@
 // Copyright (c) <YEAR> <COPYRIGHT HOLDER>.
 // Licensed under the MIT License.
 
-#include <print>
 #ifdef _DEBUG
 #include <crtdbg.h>
 #endif
+
+#include <print>
+
 #include "absl/strings/str_cat.h"
 #include "say_hello.h"
 
