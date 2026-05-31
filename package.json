@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "code-lint",
   "private": true,
   "type": "module",
   "scripts": {

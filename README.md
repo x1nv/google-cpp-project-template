@@ -12,7 +12,6 @@ Welcome to your C++ Project Template. This template adheres to the Google Style 
 | release_version.yml | `<YEAR>` and `<COPYRIGHT HOLDER>` |
 | .clang-format | `Language` default is `Cpp` |
 | .clangd | `/std:` default is `c++23preview` |
-| package.json | `name` default is `my-project` |
 | .vscode/tasks.json | definition of how to compile |
 | .bazelrc | compilation options, default is clang-cl.exe configs |
 | release_version.yml | custom release workflow |
@@ -63,7 +62,6 @@ Windows **PowerShell** input:
 cd /d E:\                                 # your local disk letter
 gh repo create <MY NEW PROJECT> --template "x1nv/cpp-project-template" --public --clone
 cd <MY NEW PROJECT>
-# please update "name" in package.json before executing `npm install` command
 npm install                               # for install Commitizen to Git commit
 pip install pre-commit                    # if not previously installed
 pre-commit install                        # install pre-commit hook
